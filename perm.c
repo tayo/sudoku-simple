@@ -12,8 +12,8 @@ int main(int argc, char* argv[])
 	int n = atoi(argv[1]);
 	int r = atoi(argv[2]);
 	// // compute permutations using tgamma
-	double num1 = tgamma(n + 1);
-	double denom1 = tgamma((n - r) + 1);
+	double num1 = tgamma((float)n + 1);
+	double denom1 = tgamma(((float)n - (float)r) + 1);
 	double res1 = num1 / denom1;
 	// // compute permutations using lgamma
 	double num2 = lgamma(n + 1);
